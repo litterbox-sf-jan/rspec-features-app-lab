@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'weather/index'
 
-  root 'home#index'
+  get 'weather/search'
+
+  root 'weather#index'
 end
