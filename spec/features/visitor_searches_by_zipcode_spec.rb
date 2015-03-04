@@ -8,7 +8,7 @@ feature 'Visitor searches by zipcode' do
 
   scenario 'raining' do
     # exercise
-    fill_in "What's your zipcode?", with: 98101
+    fill_in "What's your zipcode?", with: @zipcode = "98101"
     click_button "Is it going to rain?"
    
     # verify
@@ -18,7 +18,7 @@ feature 'Visitor searches by zipcode' do
 
   scenario 'sunny' do
     # exercise
-    fill_in "What's your zipcode?", with: 94702
+    fill_in "What's your zipcode?", with: @zipcode = "94702"
     click_button "Is it going to rain?"
    
     # verify
@@ -26,5 +26,7 @@ feature 'Visitor searches by zipcode' do
     expect(page).to have_content("No umbrella needed")
   end
 
-
+  after do
+    expect(get_me_the_cookie('zipcode')[:value]).to eq(@zipcode)
+  end
 end

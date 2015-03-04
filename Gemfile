@@ -46,5 +46,6 @@ group :development, :test do
   gem 'capybara'
   gem 'guard-rspec', require: false
   gem 'pry-rails'
+  gem 'show_me_the_cookies'
 end
 
