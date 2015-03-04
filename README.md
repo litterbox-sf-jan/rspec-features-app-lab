@@ -39,7 +39,7 @@ Let’s assume that you want to build an app, which gives the user the ability t
 ### At command line:
 
 ```
-rails new -TBd
+rails new -TBd postgresql
 ```
 
 The `-T` up there tells rails to generate the app without a test framework.
