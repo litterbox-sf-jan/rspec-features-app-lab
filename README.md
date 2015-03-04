@@ -34,3 +34,27 @@ Let’s assume that you want to build an app, which gives the user the ability t
 ### Teardown
 * Mostly RSpec will take care of it for you
 
+## RSpec setup when initializing your rails app
+
+### At command line:
+
+```
+rails new -TBd
+```
+
+The `-T` up there tells rails to generate the app without a test framework.
+
+### In Gemfile:
+
+```
+gem ‘rspec-rails’
+```
+
+That will add `rspec` as your test framework for your rails app.
+
+### At command line:
+
+```
+bundle install
+rails g rspec:install
+```
