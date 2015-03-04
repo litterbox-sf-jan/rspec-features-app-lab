@@ -6,7 +6,7 @@ feature 'Visitor searches by zipcode' do
     visit root_path
 
     # exercise
-    fill_in "What's your zipcode?", with: 94702
+    fill_in "What's your zipcode?", with: 98101
     click_button "Is it going to rain?"
    
     # verify
