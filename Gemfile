@@ -45,5 +45,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'guard-rspec', require: false
+  gem 'pry-rails'
 end
 
