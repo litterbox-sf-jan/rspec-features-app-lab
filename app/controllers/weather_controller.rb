@@ -4,6 +4,6 @@ class WeatherController < ApplicationController
   end
 
   def search
-
+        
   end
 end
