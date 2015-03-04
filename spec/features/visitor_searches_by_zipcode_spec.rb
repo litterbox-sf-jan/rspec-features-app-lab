@@ -1,10 +1,12 @@
 require 'rails_helper'
 
 feature 'Visitor searches by zipcode' do
-  scenario 'raining' do
+  before do
     # setup
     visit root_path
+  end
 
+  scenario 'raining' do
     # exercise
     fill_in "What's your zipcode?", with: 98101
     click_button "Is it going to rain?"
@@ -15,9 +17,6 @@ feature 'Visitor searches by zipcode' do
   end
 
   scenario 'sunny' do
-    # setup
-    visit root_path
-
     # exercise
     fill_in "What's your zipcode?", with: 94702
     click_button "Is it going to rain?"
@@ -26,4 +25,6 @@ feature 'Visitor searches by zipcode' do
     expect(page).to have_content("Sun's gonna be shining!")
     expect(page).to have_content("No umbrella needed")
   end
+
+
 end

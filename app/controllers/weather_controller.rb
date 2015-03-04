@@ -1,6 +1,8 @@
 class WeatherController < ApplicationController
-  def weather
-
+  def index
+    if zipcode = cookies[:zipcode]
+      redirect_to weather_search_path(zipcode: zipcode)
+    end
   end
 
   def search
