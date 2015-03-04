@@ -15,5 +15,15 @@ feature 'Visitor searches by zipcode' do
   end
 
   scenario 'sunny' do
+    # setup
+    visit root_path
+
+    # exercise
+    fill_in "What's your zipcode?", with: 94702
+    click_button "Is it going to rain?"
+   
+    # verify
+    expect(page).to have_content("Sun's gonna be shining!")
+    expect(page).to have_content("No umbrella needed")
   end
 end
