@@ -49,8 +49,9 @@ The `-T` up there tells rails to generate the app without a test framework.
 In the `group :development, :test do`:
 
 ```
-gem ‘rspec-rails’
-gem ‘capybara’
+gem 'rspec-rails'
+gem 'capybara'
+gem 'guard-rspec', require: false
 ```
 
 That will add `rspec` as your test framework for your rails app.
@@ -60,4 +61,5 @@ That will add `rspec` as your test framework for your rails app.
 ```
 bundle install
 rails g rspec:install
+guard init rspec
 ```
