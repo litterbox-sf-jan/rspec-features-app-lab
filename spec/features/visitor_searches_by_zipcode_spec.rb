@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 feature 'Visitor searches by zipcode' do
   scenario 'raining' do
